@@ -1232,12 +1232,12 @@ static PyMethodDef methods[] = {
 		"Returns column width."},
 	{"rowHeight", (PyCFunction) row_height, METH_VARARGS,
 		"Returns row height."},
-	{"setCol", (PyCFunction) set_col, METH_KEYWORDS,
+	{"setCol", (PyCFunction) set_col, METH_VARARGS | METH_KEYWORDS,
 		"Sets column width and format for all columns from colFirst to colLast. "
 		"Column width measured as the number of characters of the maximum digit width of the numbers 0, 1, 2, ..., 9 as rendered in the normal style's font. "
 		"If format equals None then format is ignored. "
 		"Columns may be hidden. Returns False if error occurs"},
-	{"setRow", (PyCFunction) set_row, METH_KEYWORDS,
+	{"setRow", (PyCFunction) set_row, METH_VARARGS | METH_KEYWORDS,
 		"Sets row height and format. Row height measured in point size. "
 		"If format equals None then format is ignored. "
 		"Row may be hidden. Returns False if error occurs"},
